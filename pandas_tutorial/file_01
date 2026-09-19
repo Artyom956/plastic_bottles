@@ -1,0 +1,37 @@
+import pandas as pd
+
+#There are 2 core objects in pd: DataFrame and Series
+
+
+pd.DataFrame({'Bob': ['I liked it.', 'It was awful.'], 
+              'Sue': ['Pretty good.', 'Bland.']},
+             index=['Product A', 'Product B'])
+#A Series, by contrast, is a sequence of data values. If a DataFrame is a table,
+#a Series is a list. And in fact you can create one with nothing more than a list:
+
+pd.Series([30, 35, 40], index=['2015 Sales', '2016 Sales', '2017 Sales'], name='Product A')            
+
+wine_reviews.shape # Number of rows and columns e.g. (12322839, 12)
+wine_reviews.head() # Trivial
+animals.to_csv("cows_and_goats.csv") # Твари а там такого не было
+reviews = pd.read_csv("../input/wine-reviews/winemag-data_first150k.csv", index_col = 0) # Если уже была 'id колонка'
+
+pd.set_option('display.max_rows', 5) # Trivial
+reviews.country # display column
+reviews['country'] # case of Python dictionaries
+
+reviews.iloc[0] # show 1st line
+reviews.iloc[:3, 0] # show first 3 lines on 1st column
+reviews.loc[0, 'country'] # shows value of country in the 1st row
+reviews.loc[:, ['taster_name', 'taster_twitter_handle', 'points']] # show only that columns
+
+iloc uses the Python stdlib indexing scheme, where the first element of the range is included and the last one excluded.
+So 0:10 will select entries 0,...,9. loc, meanwhile, indexes inclusively. So 0:10 will select entries 0,...,10.
+
+
+reviews.set_index("title") # Label-based selection derives its power from the labels in the index.
+Critically, the index we use is not immutable. We can manipulate the index in any way we see fit.
+
+# Conditional search examples
+reviews.loc[reviews.country == 'Italy'] 
+reviews.loc[reviews.country.isin(['Italy', 'France'])]
