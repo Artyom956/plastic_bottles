@@ -1,0 +1,85 @@
+----------sclearn.ensemble----------  
+https://scikit-learn.org/stable/api/sklearn.ensemble.html
+Notes on module: Ensemble regressors, хватит пока
+
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html#sklearn.ensemble.GradientBoostingRegressor
+class sklearn.ensemble.GradientBoostingRegressor(*, loss='squared_error', learning_rate=0.1,
+n_estimators=100, subsample=1.0, criterion='deprecated', min_samples_split=2, min_samples_leaf=1,
+min_weight_fraction_leaf=0.0, max_depth=3, min_impurity_decrease=0.0, init=None, random_state=None,
+max_features=None, alpha=0.9, verbose=0, max_leaf_nodes=None, warm_start=False, validation_fraction=0.1,
+n_iter_no_change=None, tol=0.0001, ccp_alpha=0.0)
+Notes on method: <10k samples
+
+
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html#sklearn.ensemble.RandomForestRegressor
+class sklearn.ensemble.RandomForestRegressor(n_estimators=100, *, criterion='squared_error', max_depth=None,
+min_samples_split=2, min_samples_leaf=1, min_weight_fraction_leaf=0.0, max_features=1.0,
+max_leaf_nodes=None, min_impurity_decrease=0.0, bootstrap=True, oob_score=False, n_jobs=None,
+random_state=None, verbose=0, warm_start=False, ccp_alpha=0.0, max_samples=None, monotonic_cst=None)
+Notes on method: support of NaNs
+
+
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.StackingRegressor.html#sklearn.ensemble.StackingRegressor
+class sklearn.ensemble.StackingRegressor(estimators, final_estimator=None, *, cv=None, n_jobs=None, passthrough=False, verbose=0)
+Notes on method: IDK WTF
+
+----------sclearn.model_selection----------
+https://scikit-learn.org/stable/api/sklearn.model_selection.html
+Notes on module: Models
+
+-----Splitters------
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.KFold.html#sklearn.model_selection.KFold
+sklearn.model_selection.KFold(n_splits=5, *, shuffle=False, random_state=None)
+Notes on method:
+
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html#sklearn.model_selection.train_test_split
+sklearn.model_selection.train_test_split(*arrays, test_size=None, train_size=None, random_state=None, shuffle=True, stratify=None)
+Notes on method:
+
+-----Validation-----
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_val_predict.html#sklearn.model_selection.cross_val_predict
+sklearn.model_selection.cross_val_predict(estimator, X, y=None, *, groups=None, cv=None, n_jobs=None,
+verbose=0, params=None, pre_dispatch='2*n_jobs', method='predict')[source]
+Notes on method: 
+
+
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_val_score.html#sklearn.model_selection.cross_val_score
+sklearn.model_selection.cross_val_score(estimator, X, y=None, *, groups=None, scoring=None, cv=None,
+n_jobs=None, verbose=0, params=None, pre_dispatch='2*n_jobs', error_score=nan)[source]
+Notes on method:
+
+-----Visualization-----
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.LearningCurveDisplay.html#sklearn.model_selection.LearningCurveDisplay
+class sklearn.model_selection.LearningCurveDisplay(*, train_sizes, train_scores, test_scores, score_name=None)
+
+classmethod from_estimator(estimator, X, y, *, groups=None, train_sizes=array([0.1, 0.33, 0.55, 0.78, 1.]), cv=None,
+scoring=None, exploit_incremental_learning=False, n_jobs=None, pre_dispatch='all', verbose=0, shuffle=False,
+random_state=None, error_score=nan, fit_params=None, ax=None, negate_score=False, score_name=None,
+score_type='both', std_display_style='fill_between', line_kw=None, fill_between_kw=None, errorbar_kw=None)
+Notes on method:
+
+https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.ValidationCurveDisplay.html#sklearn.model_selection.ValidationCurveDisplay
+class sklearn.model_selection.ValidationCurveDisplay(*, param_name, param_range, train_scores, test_scores, score_name=None)
+
+classmethod from_estimator(estimator, X, y, *, param_name, param_range, groups=None, cv=None, scoring=None, n_jobs=None, pre_dispatch='all',
+verbose=0, error_score=nan, fit_params=None, ax=None, negate_score=False, score_name=None, score_type='both', std_display_style='fill_between',
+line_kw=None, fill_between_kw=None, errorbar_kw=None)
+Notes on method:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
